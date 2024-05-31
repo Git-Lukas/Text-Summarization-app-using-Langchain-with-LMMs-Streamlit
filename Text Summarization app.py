@@ -16,7 +16,7 @@ def summarize_text(txt):
     # This open source model can be downloaded from here
     # Their are multiple models available just replace it in place of model and try it.
     llm = CTransformers(
-        model="llama-2-7b-chat.ggmlv3.q2_K.bin",
+        model=r"D:\Lucas\Master_Docs\2-Semestre\Técnicas de Desarrollo Avanzado de Aplicaciones Big Data\AC-2\llama-2-7b-chat.ggmlv3.q2_K.bin",
         model_type="llama",
          max_new_tokens = 512,
         temperature = 0.5   )
@@ -50,4 +50,5 @@ with st.form('summarize_form', clear_on_submit=True):
 
 
 if len(result):
+    st.title('📝✅ Summarization Result')
     st.info(response)
